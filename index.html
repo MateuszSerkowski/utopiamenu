@@ -20,7 +20,6 @@
             color: #fff;
         }
         header {
-        
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
@@ -60,8 +59,41 @@
             gap: 10px; /* Lepsze odstępy między obrazami */
             overflow-x: auto;
         }
+        .category-items img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        /* Efekt dla obrazu po dotknięciu lub najechaniu */
         .category-items img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Powiększenie obrazu */
+            filter: brightness(0.7) blur(2px); /* Ściemniamy i rozmywamy obraz */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Półprzeźroczyste tło */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        /* Pojawianie się overlay po najechaniu lub dotknięciu */
+        .image-container:hover .overlay {
+            opacity: 1; /* Po najechaniu lub dotknięciu tekst staje się widoczny */
+        }
+        .overlay p {
+            color: #fff;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 10px;
         }
         footer {
             text-align: center;
@@ -89,130 +121,113 @@
     </section>
 
     <section class="categories">
-                    <!-- Kategoria 1: Author Cocktails -->
-                    <div class="category">
-                        <h2>Author Cocktails</h2>
-                        <div class="category-items">
-                            <div class="image-container">
-                                <img src="f1.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f3.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f4.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f1.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f1.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f3.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f4.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f1.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Kategoria 1: Author Cocktails -->
+        <div class="category">
+            <h2>Author Cocktails</h2>
+            <div class="category-items">
+                <div class="image-container">
+                    <img src="f1.png" alt="Cocktail 1">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
                     </div>
-                
-                    <!-- Kategoria 2: Modern Classic Cocktails -->
-                    <div class="category">
-                        <h2>Modern Classic Cocktails</h2>
-                        <div class="category-items">
-                            <div class="image-container">
-                                <img src="f3.png" alt="Cocktail 3">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 3: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f1.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f3.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f4.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <img src="f2.png" alt="Cocktail 1">
-                                <div class="overlay">
-                                    <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
-                                </div>
-                            </div>
-                            <!-- ... (inne obrazy) ... -->
-                        </div>
+                </div>
+                <div class="image-container">
+                    <img src="f2.png" alt="Cocktail 2">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 2: Składnik 1, Składnik 2, Składnik 3</p>
                     </div>
-                </section>
-                
+                </div>
+                <div class="image-container">
+                    <img src="f3.png" alt="Cocktail 3">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 3: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f4.png" alt="Cocktail 4">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 4: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f1.png" alt="Cocktail 1">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f2.png" alt="Cocktail 2">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 2: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f3.png" alt="Cocktail 3">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 3: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f4.png" alt="Cocktail 4">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 4: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Kategoria 2: Modern Classic Cocktails -->
+        <div class="category">
+            <h2>Modern Classic Cocktails</h2>
+            <div class="category-items">
+                <div class="image-container">
+                    <img src="f3.png" alt="Cocktail 3">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 3: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f2.png" alt="Cocktail 2">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 2: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f1.png" alt="Cocktail 1">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f4.png" alt="Cocktail 4">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 4: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f1.png" alt="Cocktail 1">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 1: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f2.png" alt="Cocktail 2">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 2: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f3.png" alt="Cocktail 3">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 3: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="f4.png" alt="Cocktail 4">
+                    <div class="overlay">
+                        <p>Skład Cocktailu 4: Składnik 1, Składnik 2, Składnik 3</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
