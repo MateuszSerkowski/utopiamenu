@@ -18,6 +18,11 @@
     overflow-x: auto;
 }
 
+.category-items img.active {
+    transform: scale(1.3);
+    filter: brightness(0.5) blur(2px);
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -30,6 +35,17 @@
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .category-items img {
+        width: 90%; /* Zmniejszamy rozmiar obrazków na telefonie */
+        height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 6em; /* Mniejszy rozmiar czcionki na telefonie */
+    }
 }
 
 .image-container:hover .overlay, .image-container:active .overlay {
