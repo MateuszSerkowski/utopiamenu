@@ -1,23 +1,41 @@
-/* Kategoria obrazków */
 .category-items img {
     width: 400px;
     height: 240px;
-    object-fit: cover; /* Przytnij obraz do wymiarów */
-    border-radius: 5px; /* Zaokrąglone rogi */
+    object-fit: cover;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Przejście transformacji i filtra */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Dodajemy efekt dla transformacji i filtra */
 }
 
-.category-items img:hover {
+.category-items img:hover, .category-items img:active {
     transform: scale(1.3); /* Powiększenie obrazu o 30% */
+    filter: brightness(0.5) blur(2px); /* Ściemniamy i rozmywamy obraz */
 }
 
 .category-items {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    padding-bottom: 10px; /* Odstęp na dole, żeby obrazki nie nakładały się na siebie */
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay, .image-container:active .overlay {
+    opacity: 1; /* Po najechaniu lub dotknięciu tekst staje się widoczny */
+}
+
 
 /* Body */
 body {
