@@ -1,94 +1,25 @@
+/* Podstawowe style obrazków */
 .category-items img {
     width: 400px;
     height: 240px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Dodajemy efekt dla transformacji i filtra */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.category-items img:hover, .category-items img:active {
+/* Efekt dla obrazu po dotknięciu lub najechaniu */
+.category-items img.active,
+.category-items img:hover {
     transform: scale(1.3); /* Powiększenie obrazu o 30% */
     filter: brightness(0.5) blur(2px); /* Ściemniamy i rozmywamy obraz */
 }
 
+/* Kontener obrazków */
 .category-items {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-}
-
-.category-items img.active {
-    transform: scale(1.3);
-    filter: brightness(0.5) blur(2px);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .category-items img {
-        width: 90%; /* Zmniejszamy rozmiar obrazków na telefonie */
-        height: auto;
-    }
-    
-    .hero h1 {
-        font-size: 6em; /* Mniejszy rozmiar czcionki na telefonie */
-    }
-}
-
-.image-container:hover .overlay, .image-container:active .overlay {
-    opacity: 1; /* Po najechaniu lub dotknięciu tekst staje się widoczny */
-}
-
-
-/* Body */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('tlo menu.jpg') no-repeat center center fixed; /* Poprawiona ścieżka */
-    background-size: cover;
-    color: #fff;
-}
-
-/* Header */
-header {
-    background-color: rgba(145, 167, 2, 0.245); /* Półprzeźroczysty zielony */
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Kontener obrazka */
-.image-container {
-    position: relative;
-    width: 400px;
-    height: 240px;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.05); /* Powiększenie obrazu przy najechaniu */
-    filter: brightness(0.5) blur(2px); /* Ściemniamy i rozmywamy obraz */
 }
 
 /* Overlay z tekstem */
@@ -106,10 +37,13 @@ header {
     transition: opacity 0.3s ease;
 }
 
-.image-container:hover .overlay {
-    opacity: 1; /* Po najechaniu tekst staje się widoczny */
+/* Pojawianie się overlay po najechaniu lub dotknięciu */
+.image-container:hover .overlay,
+.image-container:active .overlay {
+    opacity: 1; /* Po najechaniu lub dotknięciu tekst staje się widoczny */
 }
 
+/* Tekst w overlay */
 .overlay p {
     color: #fff;
     font-size: 1.2em;
@@ -151,4 +85,6 @@ header {
 
 @media screen and (max-width: 480px) {
     .hero h1 {
-        font-size: 3em; /* Jeszcze mniejsze dla bardzo małych ekranów *
+        font-size: 3em; /* Jeszcze mniejsze dla bardzo małych ekranów */
+    }
+}
