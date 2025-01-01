@@ -1,15 +1,16 @@
-/* Kategoria obrazków */
+/* Kategoria obrazkĂłw */
 .category-items img {
+    
     width: 400px;
     height: 240px;
-    object-fit: cover; /* Przytnij obraz do wymiarów */
-    border-radius: 5px; /* Zaokrąglone rogi */
+    object-fit: cover; /* Przytnij obraz do wymiarĂłw */
+    border-radius: 5px; /* ZaokrÄglone rogi */
     cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Przejście transformacji i filtra */
+    transition: transform 0.3s ease, filter 0.3s ease; /* PrzejĹcie transformacji i filtra */
 }
 
 .category-items img:hover {
-    transform: scale(1.3); /* Powiększenie obrazu o 30% */
+    transform: scale(1.3); /* PowiÄkszenie obrazu o 30% */
 }
 
 .category-items {
@@ -23,14 +24,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('tlo menu.jpg') no-repeat center center fixed; /* Poprawiona ścieżka */
+    background: url('grafiki/tlo menu.jpg') no-repeat center center fixed; /* Poprawiona ĹcieĹźka */
     background-size: cover;
     color: #fff;
 }
 
 /* Header */
 header {
-    background-color: rgba(145, 167, 2, 0.245); /* Półprzeźroczysty zielony */
+    background-color: rgba(145, 167, 2, 0.245); /* PĂłĹprzeĹşroczysty zielony */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -53,8 +54,8 @@ header {
 }
 
 .image-container:hover img {
-    transform: scale(1.05); /* Powiększenie obrazu przy najechaniu */
-    filter: brightness(0.5) blur(2px); /* Ściemniamy i rozmywamy obraz */
+    transform: scale(1.05); /* PowiÄkszenie obrazu przy najechaniu */
+    filter: brightness(0.5) blur(2px); /* Ĺciemniamy i rozmywamy obraz */
 }
 
 /* Overlay z tekstem */
@@ -64,7 +65,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Półprzeźroczyste tło */
+    background: rgba(0, 0, 0, 0.6); /* PĂłĹprzeĹşroczyste tĹo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +74,7 @@ header {
 }
 
 .image-container:hover .overlay {
-    opacity: 1; /* Po najechaniu tekst staje się widoczny */
+    opacity: 1; /* Po najechaniu tekst staje siÄ widoczny */
 }
 
 .overlay p {
@@ -83,31 +84,31 @@ header {
     padding: 10px;
 }
 
-/* Hero - Nagłówek powitalny */
+/* Hero - NagĹĂłwek powitalny */
 .hero h1 {
-    font-family: 'Meow Script', sans-serif; /* Użycie czcionki Meow Script */
-    font-size: 6em; /* Zmniejszyłem rozmiar dla lepszej responsywności */
+    font-family: 'Meow Script', sans-serif; /* UĹźycie czcionki Meow Script */
+    font-size: 6em; /* ZmniejszyĹem rozmiar dla lepszej responsywnoĹci */
     margin: 0;
     text-align: center;
     color: #fff;
 }
 
 .hero h1 span {
-    display: block; /* Ustawienie tekstu w blokach, żeby każda część była na nowej linii */
+    display: block; /* Ustawienie tekstu w blokach, Ĺźeby kaĹźda czÄĹÄ byĹa na nowej linii */
 }
 
 .hero h1 span:first-child {
-    font-size: 3.5em;  /* Mniejszy rozmiar dla "Welcome to" */
+    font-size: 1em;  /* Mniejszy rozmiar dla "Welcome to" */
 }
 
 .hero h1 span:last-child {
-    font-size: 4.5em;  /* Większy rozmiar dla "Utopia Cocktail Bar" */
+    font-size: 2em;  /* WiÄkszy rozmiar dla "Utopia Cocktail Bar" */
 }
 
-/* Responsywność - zmiana rozmiarów czcionek na mniejszych ekranach */
+/* ResponsywnoĹÄ - zmiana rozmiarĂłw czcionek na mniejszych ekranach */
 @media screen and (max-width: 768px) {
     .hero h1 {
-        font-size: 4em; /* Zmniejszenie rozmiaru czcionki na małych ekranach */
+        font-size: 2em; /* Zmniejszenie rozmiaru czcionki na maĹych ekranach */
     }
     .category-items img {
         width: 300px;
@@ -117,7 +118,7 @@ header {
 
 @media screen and (max-width: 480px) {
     .hero h1 {
-        font-size: 3em; /* Jeszcze mniejsze dla bardzo małych ekranów */
+        font-size: 1em; /* Jeszcze mniejsze dla bardzo maĹych ekranĂłw */
     }
     .category-items img {
         width: 250px;
