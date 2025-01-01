@@ -24,7 +24,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('grafiki/tlo menu.jpg') no-repeat center center fixed; /* Poprawiona ĹcieĹźka */
+    background: url('tlo menu.jpg') no-repeat center center fixed; /* Poprawiona ĹcieĹźka */
     background-size: cover;
     color: #fff;
 }
